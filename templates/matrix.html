@@ -1,0 +1,55 @@
+{% block content %}
+
+
+<div class="carousel-item">
+   
+            <h1 style="color: blue;text-align:center; font-size: 3vw; font-weight: bold;">Confusion Matrices for different algorithms</h1>
+            <p style="text-align: center; font-size: 2vw; font-weight: bold;">Random Forest Classifier, Support Vector machine, Logistic Regression, K-nearest Neighbor Classifier, Naive Bayes Classifier, XGBoost Classifier</p>
+            <br>
+            <div class="container">
+                <div class="card card-body" style="border: 1px solid black; box-shadow: 0 0 10px black;">
+                    <h2>This is basic Machine Learning and Deep Learning based flask WebApp.</h2>
+                    <br>
+                    <h2>Model Accuracies:</h2>
+                    <ul>
+                        <li> Decision Tree <strong>77.04%</strong></li>
+                    </ul>
+                    <ul>
+                        <li>  Random Forest <strong>83.60%</strong></li>
+                    </ul>
+                    <ul>
+                        <li>  SVM <strong>86.88%</strong></li>
+                    </ul>
+                    <ul>
+                        <li>   Naive Bayes <strong>85.24%</strong></li>
+                    </ul>
+                    <ul>
+                        <li>  KNN <strong>83.60%</strong></li>
+                    </ul>
+                    <br>
+                    <h3>Information about the Diseases which this webApp can predict.</h3>
+                    <br>
+                </div>
+
+            <h1 style="color: rgb(31, 120, 53);text-align:center; font-size: 3vw; font-weight: bold;">Random Forest Classifier</h1>
+            <img src="{{ url_for('static', filename = 'rf.png') }} " height=700px" width="800px">
+            <hr>
+            <h1 style="color: rgb(31, 120, 53);text-align:center; font-size: 3vw; font-weight: bold;"> Support Vector machine</h1>
+            <img src="{{ url_for('static', filename = 'svc.png') }} " height=700px" width="800px">
+            <hr>
+            <h1 style="color: rgb(31, 120, 53);text-align:center; font-size: 3vw; font-weight: bold;">Logistic Regression</h1>
+            <img src="{{ url_for('static', filename = 'lr.png') }} " height=700px" width="800px">
+            <hr>
+            <h1 style="color: rgb(31, 120, 53);text-align:center; font-size: 3vw; font-weight: bold;">K-nearest Neighbor Classifier</h1>
+            <img src="{{ url_for('static', filename = 'knn.png') }} " height=700px" width="800px">
+            <hr>
+            <h1 style="color: rgb(31, 120, 53);text-align:center; font-size: 3vw; font-weight: bold;">Naive Bayes Classifier</h1>
+            <img src="{{ url_for('static', filename = 'nb.png') }} " height=700px" width="800px">
+            <hr>
+            <h1 style="color: rgb(31, 120, 53);text-align:center; font-size: 3vw; font-weight: bold;">XGBoost Classifier</h1>
+            <img src="{{ url_for('static', filename = 'xgb.png') }} " height=700px" width="800px">
+            
+
+    </div>
+
+{% endblock %}

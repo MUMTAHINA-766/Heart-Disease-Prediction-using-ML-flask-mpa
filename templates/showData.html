@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Table </title>			
+	</head>
+	<body>
+		<li class="nav-item active">
+			<a href="{{ url_for('home') }}" class="nav-link">Home</a>
+		  </li>
+		  
+		<div align="center">
+			<table>
+				<h1>
+				<!--Displaying the converted table-->
+					{% for showData in tables %}
+					<h2>{{titles[loop.index]}}</h2>							
+					{{ showData|safe }}
+					{% endfor %}	
+				</h1>
+			</table>
+		</div>
+	</body>
+</html>

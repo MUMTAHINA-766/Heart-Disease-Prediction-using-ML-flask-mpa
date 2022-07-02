@@ -1,0 +1,40 @@
+{% block content %}
+
+<body>
+ <div class="carousel-item">
+    <head>
+        <meta charset="UTF-8">
+        
+        <h1 style="color: blue;text-align:center">Relations Among all samples</h1>
+        <p style="text-align: center;">age , sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal, target</p>
+        <br>
+        <title>Awesome-pyecharts</title>
+        <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    </head>
+    
+        <h1 style="color: purple; text-align:center">Show Bar Chart</h1>
+        <div id="barStack" style="width:1000px; height:600px;"></div>
+        <hr/>
+    
+        <script>
+         
+            $(
+                function () {
+                    var chart = echarts.init(document.getElementById('barStack'), 'white', {renderer: 'canvas'});
+                    $.ajax({
+                        type: "GET",
+                        url: "http://127.0.0.1:5000/barStackChart",
+                        dataType: 'json',
+                        success: function (c) {
+                            chart.setOption(c);
+                        }
+                    });
+                }
+            )
+        </script>
+
+  </div>
+</body>
+
+{% endblock %}
